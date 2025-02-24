@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1> Burger Town!</h1>
+  <p>Welcome to burger town! We love BURGERS! </p>
+  <br>
+  <p>Its not just a sandwich, its a BURGER!</p>
+
+  <script>
+    function mostrarConsola() {
+      console.log("Someone click on BURGER TOWN!"); //2. When someone clicks on "BURGER TOWN!" a `console.log` should print out "Someone click on BURGER TOWN!".
+    }
+
+    function cambiarColor() {
+      document.querySelector('h2').style.color = 'red';
+    }
+  </script>
+
+  <h2 span onclick="mostrarConsola()">Burger Town!</span></h1>
+  
+  <img src="Burger4.svg" alt="A picture of a burger" width="200" height="200"> <!--3. Add a picture of a burger under the headline "A picture of a BURGER!".-->
+  <h2 id="changeBurgerColor">A picture of a BURGER!</h2>
+  
+  <p>Here is a list of BURGERS!</p>
+  <ul>
+    <li>BURGER!</li>
+    <li>BURGERS!</li>
+    <li>BURGERz!</li>
+    <li onclick="cambiarColor()">BURGER with RICE!!</li> 
+    <li onclick="cambiarColor()">BURGERz with MORE RICE!!</li> 
+    <li onclick="cambiarColor()">BURGERz with Chesse and RICE!!</li> 
+    <li onclick="cambiarColor()">BURGERz but its only RICE!!</li> <!-- 4. Everytime someone clicks on the word “RICE!!” it turns the headline’s text “A Picture of a BURGER” red. -->
+  </ul>
+
+  <h2> Burger Town!</h1>
+
+  <script>
+    function mostrarMensaje() {
+      alert("ITS BURGER TIME"); //1. Make "COME TO BUERGER TOWN!" a clickable alert that says "ITS BURGERTIME".
+    }
+  </script>
+  <h3 span onclick="mostrarMensaje()" style="color: brown; cursor: pointer;">COME TO BURGER TOWN!</span></h3>
+
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

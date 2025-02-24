@@ -1,0 +1,22 @@
+/* <link rel="stylesheet" href="./style.css"> 1. Linea incluido en index.html para llamar a este archivo CSS*/ 
+
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+body{
+  background-color: rgb(24, 23, 23);
+}
+
+h1 { /* 2. El color de todos los h1 es verde */
+  color: green;
+}
+
+.blue { /* 3. Color azul para toda la clase Blue */
+  color: blue;
+}
+
+#red { /* 4. Color rojo para el id red */
+  color: red;
+}

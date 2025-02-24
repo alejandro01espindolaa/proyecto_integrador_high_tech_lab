@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(24, 24, 24);
+    color: rgb(247, 247, 248);
+    text-align: center;
+    max-width: 1240px;
+
+header {
+    font-size: 3.5em;
+    }
+
+#p1 {
+    background-color: salmon;
+    color: black;
+    max-width: 200px;
+    }
+}

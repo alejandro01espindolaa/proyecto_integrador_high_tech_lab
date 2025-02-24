@@ -1,0 +1,24 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: rgb(121, 120, 120);
+  }
+
+  h3 {
+    color: green;
+  }
+
+  .blueH3 {
+    color: blue;
+  }
+
+  #redH3 {
+    color: red;
+  }
+
+  h5 {
+    font-size: 4rem;
+}

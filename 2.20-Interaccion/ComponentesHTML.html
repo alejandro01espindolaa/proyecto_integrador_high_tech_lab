@@ -1,0 +1,52 @@
+<!DOCTYPE html>        
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes HTML</title>
+</head>
+<body>    
+    <h1>Interaccion con componentes HTML</h1>
+
+    <button 
+        onclick="mostrarAlerta()">Haz click aqui
+    </button>
+    <!-- Boton que imprimira un mensaje en la consola cuando se haga clic -->
+
+    <script>
+        function mostrarAlerta() {
+            alert("Hola! Este es un mensaje de alerta.");
+        }
+    </script>
+    <br> <!-- Salto de linea -->
+    <hr> <!-- Separacion -->
+    <br>
+    <button onclick="mostrarConsola()">Ver consola</button>
+    <script>
+        function mostrarConsola() {
+            console.log("Hola! Este es un mensaje de consola."); // Imprime un mensaje en la consola del navegador
+        }
+    </script>
+    <br> <!-- Salto de linea -->
+    <hr> <!-- Separacion -->
+    <br>
+    <button onclick="cambiarTexto()">Cambiar Texto</button>
+    <p id="mensaje">Texto original</p>
+    <script>
+        // Busca el parrafo con el id y cambiamos su contenido
+        function cambiarTexto() {
+            document.getElementById("mensaje").innerText = "Texto cambiado";
+        }
+    </script>
+    <br> <!-- Salto de linea -->
+    <hr> <!-- Separacion -->
+    <br>
+    <script>
+        function monstrarMensaje() {
+            alert("Hola! Hiciste clic en la palabra aqui");
+        }
+    </script>
+    <p>Haz click en la palabra <span onclick="monstrarMensaje()" style="color: brown; cursor: pointer;">aqui</span> para ver una alerta.</p>
+    
+</body>
+</html>
