@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Médicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        .service-list li {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            width: 200px;
+        }
+        .service-list li:hover {
+            background-color: #0056b3;
+        }
+        .details-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            display: none;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            text-align: left;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .details-box h2 {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Servicios Médicos</h1>
+    <ul class="service-list">
+        <li onclick="showDetails('quimica')">Química Sanguínea</li>
+        <li onclick="showDetails('excreciones')">Análisis de Excreciones</li>
+        <li onclick="showDetails('bioquimica')">Bioquímica</li>
+        <li onclick="showDetails('banco')">Banco de Sangre</li>
+        <li onclick="showDetails('hematologia')">Hematología</li>
+    </ul>
+
+    <div id="details" class="details-box">
+        <h2 id="title"></h2>
+        <p id="description"></p>
+        <ul id="items"></ul>
+    </div>
+
+    <script>
+        function showDetails(service) {
+            let title = "";
+            let description = "";
+            let items = [];
+
+            if (service === "quimica") {
+                title = "Química Sanguínea";
+                description = "La química sanguínea es un análisis de sangre que mide los niveles de sustancias en el suero sanguíneo. Sirve para evaluar el funcionamiento de órganos y diagnosticar enfermedades.";
+                items = ["Glucosa", "Urea", "Creatinina", "Colesterol", "Bilirrubina", "Enzimas hepáticas", "Proteínas", "Minerales"];
+            } else if (service === "excreciones") {
+                title = "Análisis de Excreciones (Coprología y Urología)";
+                description = "Este servicio incluye pruebas de laboratorio clínico que analizan muestras de excreciones corporales para evaluar la salud del sistema digestivo y urinario.";
+                items = [
+                    "Coprología: Se analiza una muestra de materia fecal para evaluar el funcionamiento intestinal y la absorción de nutrientes.",
+                    "Urología: Se analiza una muestra de orina para valorar la función renal y vesical mediante características fisicoquímicas."
+                ];
+            } else {
+                title = "Servicio en construcción";
+                description = "Próximamente agregaremos más información sobre este servicio.";
+                items = [];
+            }
+
+            document.getElementById("title").textContent = title;
+            document.getElementById("description").textContent = description;
+            
+            let itemList = document.getElementById("items");
+            itemList.innerHTML = "";
+            items.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = item;
+                itemList.appendChild(li);
+            });
+
+            document.getElementById("details").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
