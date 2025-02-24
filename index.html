@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  Hello world
+
+  <div id="chatbot-container">
+    <button id="chatbot-toggle">Chatbot</button>
+    <div id="chatbot-window">
+        <div id="chatbot-messages"></div>
+        <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje...">
+        <button id="chatbot-send">Enviar</button>
+    </div>
+</div>
+
+<script>
+
+const chatbotToggle = document.getElementById('chatbot-toggle');
+const chatbotWindow = document.getElementById('chatbot-window');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotMessages = document.getElementById('chatbot-messages');
+const chatbotSend = document.getElementById('chatbot-send');
+
+
+chatbotWindow.classList.add('hidden');
+
+
+chatbotToggle.addEventListener('click', () => {
+  chatbotWindow.classList.toggle('hidden');
+});
+
+
+chatbotSend.addEventListener('click', sendMessage);
+chatbotInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+function sendMessage() {
+  const userMessage = chatbotInput.value.trim();
+  if (userMessage !== '') {
+
+    const userMsgElement = document.createElement('div');
+    userMsgElement.classList.add('chatbot-message', 'user-message');
+    userMsgElement.textContent = userMessage;
+    chatbotMessages.appendChild(userMsgElement);
+    chatbotInput.value = '';
+
+   
+    simulateBotResponse(userMessage);
+  }
+}
+
+function simulateBotResponse(userMessage) {
+
+  setTimeout(() => {
+    const botResponse = '机器人回复：' + userMessage;
+    const botMsgElement = document.createElement('div');
+    botMsgElement.classList.add('chatbot-message', 'bot-message');
+    botMsgElement.textContent = botResponse;
+    chatbotMessages.appendChild(botMsgElement);
+
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  }, 1000);
+}
+
+</script>
+</body>
+
+</html>
