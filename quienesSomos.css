@@ -7,29 +7,53 @@ body {
 }
 header {
     background-color: #27368c;
-    color: white;
+    color: #f2f2f2;
+    font-size: 1.9rem;
     text-align: center;
     padding: 20px;
 }
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background-color: #f2f2f2;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .historia {
-    border-left: 5px solid #731010;
-    padding-left: 15px;
+    border-left: 15px solid #590f0f;
+    padding-right: 15px;
+    border-right: 15px solid #590f0f;
+    padding-right: 15px;
+    text-align: center;
 }
+ 
 .trayectoria {
-    border-left: 5px solid #590f0f;
-    padding-left: 15px;
+    border-left: 15px solid #590f0f;
+    padding-right: 15px;
+    border-right: 15px solid #590f0f;
+    padding-right: 15px;
+    text-align: center;
 }
+
+.contacto {
+    border-left: 15px solid #590f0f;
+    padding-right: 15px;
+    border-right: 15px solid #590f0f;
+    padding-right: 15px;
+    text-align: center;
+}
+
 footer {
     background-color: #151859;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
 }
+
+.blanco {
+    color: #f2f2f2;
+    font-size: 1.4rem;
+}
+
