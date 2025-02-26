@@ -7,11 +7,13 @@ body {
 }
 header {
     background-color: #27368c;
-    color: #f2f2f2;
+    color: #590f0f;
     font-size: 1.9rem;
     text-align: center;
+    font-family: 'Mifuente';
     padding: 20px;
 }
+
 section {
     padding: 20px;
     margin: 20px;
@@ -55,5 +57,10 @@ footer {
 .blanco {
     color: #f2f2f2;
     font-size: 1.4rem;
+    font-family: 'Mifuente';
 }
 
+@font-face {
+    font-family: 'Mifuente';
+    src: url('https://fonts.google.com/specimen/Anton');
+}  
