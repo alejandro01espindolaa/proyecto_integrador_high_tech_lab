@@ -1,0 +1,29 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    color: #151859;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #27368C;
+    color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #151859;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
